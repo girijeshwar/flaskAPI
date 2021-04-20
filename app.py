@@ -30,7 +30,7 @@ def nextstep():
         elif operation =="get":
             return render_template('/getrecord.html')
 
-#for inserting record in the respect tables  
+#for inserting record in the respective tables  
 @app.route('/insertrecord',methods = ['POST', 'GET'])
 def insertrecord():
     if request.method == 'POST':
