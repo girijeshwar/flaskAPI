@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert page</title>
+</head>
+<body>
+    <a href="\"> Get back to home</a><br><br>
+    <form action="{{ url_for('insertrecord') }}" method = "POST">
+        <label for="option">Select Table:</label>
+    <select name="option" id="option">
+        <option value="Audio">Audio</option>
+        <option value="Podcast">Podcast</option>
+        <option value="AudioBook">Audiobook</option>
+    </select><br><br>  
+        <label for="ID"> File_ID:</label>
+        <input type="text" id="ID" name="ID"><br> <br>
+
+        <label for="Title">Name/Title</label>
+        <input type="text" id="Title" name="Title">
+        <br>
+        <br>
+        <label for="Duration">Duration(s)</label>
+        <input type="text" id="Duration" name="Duration"><br><br>
+        
+        <label for="Uploaded">Uploaded Time (YYYY-MM-DD)</label>
+        <input type="text" id="Uploaded" name="Uploaded"><br> <br>
+
+        <label for="Host">Host(For Podcast only)</label>
+        <input type="text" id="Host" name="Host">
+        <br><br>
+        <label for="Participants">Participants(For Podcast only)</label>
+        <input type="text" id="Participants" name="Participants">
+        <br>
+        <br>
+        <label for="AuthorOfTitle">Author of title(For Audio book only)</label>
+        <input type="text" id="AuthorOfTitle" name="AuthorOfTitle"><br><br>
+        <label for="Narrator">Narrator(For Audio book only)</label>
+        <input type="text" id="Narrator" name="Narrator"><br><br>
+        <input type="submit" value="Submit">
+        
+        <h1> {{ data1 }} </h1>
+</body>
+</html>

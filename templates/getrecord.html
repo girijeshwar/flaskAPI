@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get page</title>
+</head>
+<body>
+    <a href="\"> Get back to home</a>
+    <section>
+    <form action="{{ url_for('getrecord') }}" method = "POST">
+    <label for="option">Select Table:</label>
+    <select name="option" id="option">
+        <option value="Audio">Audio</option>
+        <option value="Podcast">Podcast</option>
+        <option value="AudioBook">Audiobook</option>
+    </select>
+        <label for="ID">AudioFileID:</label>
+        <input type="text" id="ID" name="ID"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+     
+     {% for result in data1 %}
+            <tr>
+                <br>
+                <td>{{ result[0] }}</td>
+                <td>{{ result[1] }}</td>
+                <td>{{ result[2] }}</td>
+                <td>{{ result[3] }}</td>
+                <td>{{ result[4] }}</td>
+                <td>{{ result[5] }}</td>
+                <br>
+            </tr>
+        {% endfor %}
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API html </title>
+
+</head>
+<body>
+    <h1>API for Audio database manipulation</h1>
+    <form action="{{ url_for('nextstep')}}" method="post">         
+          
+          <label for="create">Select operation:</label>
+            <select id="operation" name="operation">
+              <option value="create">Create Table</option>
+              <option value="Insert">Insert records</option>
+              <option value="Update">Update table</option>
+              <option value="delete">Delete table</option>
+              <option value="get">Get record</option>
+            </select>
+
+            <label for="selectType">Select Audio Type:</label>
+            <select id="AudioType" name="AudioType">
+              <option value="audio">Audio</option>
+              <option value="Podcast">Podcast</option>
+              <option value="Audiobook">Audiobook</option>
+            </select> -->
+             <input forsub= "submit "type="submit">
+        </form> 
+        <h1>{{ data1 }} </h1>
+</body>
+</html>
